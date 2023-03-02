@@ -1,0 +1,33 @@
+label {
+  display: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin-bottom: inherit;
+}
+
+#generator {
+  position: relative;
+  padding: 1em;
+  margin-top: 3em;
+  border: 1px solid;
+  min-height: 200px;
+}
+
+#generator .line {
+  display: block;
+}
+
+#generator #send {
+  display: none;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.top-nav-title i {
+  display: none;
+}
+
+.top-nav-title:hover i {
+  display: inline;
+}

@@ -1,1 +1,1 @@
-<label><input type="checkbox" id="task-<?= $task->id ?>"> <?= h($task->name) ?></label>
+<label><input type="checkbox" id="task-<?= $task->id ?>" data-id="<?= $task->id ?>" data-text="<?= h($task->name) ?>"> <?= h($task->name) ?></label>

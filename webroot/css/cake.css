@@ -219,10 +219,3 @@ th {
         content: " \2190";
     }
 }
-
-label {
-    display: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin-bottom: inherit;
-}
