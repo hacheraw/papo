@@ -1,0 +1,1 @@
+<label><input type="checkbox" id="task-<?= $task->id ?>"> <?= h($task->name) ?></label>

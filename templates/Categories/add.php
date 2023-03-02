@@ -19,7 +19,7 @@
                 <legend><?= __('Add Category') ?></legend>
                 <?php
                     echo $this->Form->control('name');
-                    echo $this->Form->control('parent_id', ['options' => $parentCategories, 'empty' => 'No parent category']);
+                    echo $this->Form->control('parent_id', ['options' => $parentCategories, 'empty' => __('No parent category')]);
                     echo $this->Form->control('position', ['min' => $min, 'max' => $max, 'step' => $step, 'value' => $max]);
                 ?>
             </fieldset>

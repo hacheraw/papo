@@ -50,7 +50,7 @@ return static function (RouteBuilder $routes) {
          * its action called 'display', and we pass a param to select the view file
          * to use (in this case, templates/Pages/home.php)...
          */
-        $builder->connect('/', ['controller' => 'Tasks', 'action' => 'whatsapp']);
+        $builder->connect('/', ['controller' => 'Categories', 'action' => 'whatsapp']);
 
         /*
          * Connect catchall routes for all controllers.

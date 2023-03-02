@@ -61,7 +61,7 @@ class CategoriesController extends AppController
             }
             $this->Flash->error(__('The category could not be saved. Please, try again.'));
         }
-        $parentCategories = $this->Categories->ParentCategories->find('list', ['limit' => 200])->all();
+        $parentCategories = $this->Categories->ParentCategories->find('treeList', ['spacer' => '- '])->all();
 
         $this->set('min', $this->Categories->getStart());
         $this->set('max', $this->Categories->getNew());
@@ -90,7 +90,7 @@ class CategoriesController extends AppController
             }
             $this->Flash->error(__('The category could not be saved. Please, try again.'));
         }
-        $parentCategories = $this->Categories->ParentCategories->find('list', ['limit' => 200])->all();
+        $parentCategories = $this->Categories->ParentCategories->find('treeList', ['spacer' => '- '])->all();
 
         $conditions = ['parent_id' => $category->parent_id];
         if (is_null($conditions['parent_id'])) {
@@ -120,5 +120,22 @@ class CategoriesController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    /**
+     * Muestra un checklist y genera un mensaje de WhatsApp según los checkeados
+     *
+     * @return \Cake\Http\Response|null|void Renders view
+     */
+    public function whatsapp()
+    {
+        $categories = $this->Categories
+            ->find('threaded') // Recursivamente
+            ->contain(['Tasks']);
+        if (empty($categories)) {
+            $this->Flash->error(__('Please, create a category first!'));
+        }
+
+        $this->set('categories', $categories);
     }
 }

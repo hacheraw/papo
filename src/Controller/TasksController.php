@@ -61,7 +61,7 @@ class TasksController extends AppController
             }
             $this->Flash->error(__('The task could not be saved. Please, try again.'));
         }
-        $categories = $this->Tasks->Categories->find('list', ['limit' => 200])->all();
+        $categories = $this->Tasks->Categories->find('treeList', ['spacer' => '- '])->all();
 
         $this->set('max', $this->Tasks->getLast());
         $this->set('min', $this->Tasks->getStart());
@@ -91,7 +91,7 @@ class TasksController extends AppController
             }
             $this->Flash->error(__('The task could not be saved. Please, try again.'));
         }
-        $categories = $this->Tasks->Categories->find('list', ['limit' => 200])->all();
+        $categories = $this->Tasks->Categories->find('treeList', ['spacer' => '- '])->all();
 
         $conditions = ['category_id' => $task->category_id];
         if (is_null($conditions['category_id'])) {
