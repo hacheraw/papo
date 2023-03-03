@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bd3c92921d6c653d8b7427c73a850b9",
+    "content-hash": "aeb90d089059e773f669b38ecaa690f9",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -355,16 +355,16 @@
         },
         {
             "name": "hacheraw/sortable",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hacheraw/sortable.git",
-                "reference": "635c622c5ccf69aab9375e1632c39a362d25c610"
+                "reference": "bd05abda202c58f1ea479a87eefcd337268cfeb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hacheraw/sortable/zipball/635c622c5ccf69aab9375e1632c39a362d25c610",
-                "reference": "635c622c5ccf69aab9375e1632c39a362d25c610",
+                "url": "https://api.github.com/repos/hacheraw/sortable/zipball/bd05abda202c58f1ea479a87eefcd337268cfeb2",
+                "reference": "bd05abda202c58f1ea479a87eefcd337268cfeb2",
                 "shasum": ""
             },
             "require": {
@@ -399,7 +399,7 @@
                 "issues": "https://github.com/hacheraw/sortable/issues",
                 "source": "https://github.com/hacheraw/sortable"
             },
-            "time": "2021-02-08T00:19:35+00:00"
+            "time": "2023-03-03T11:32:15+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -5919,8 +5919,5 @@
         "php": ">=7.4"
     },
     "platform-dev": [],
-    "platform-overrides": {
-        "php": "8.1.16"
-    },
     "plugin-api-version": "2.3.0"
 }
