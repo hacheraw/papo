@@ -131,7 +131,8 @@ class CategoriesController extends AppController
     {
         $categories = $this->Categories
             ->find('threaded') // Recursivamente
-            ->contain(['Tasks']);
+            ->contain(['Tasks'])
+            ->order(['Categories.position' => 'ASC']);
         if (empty($categories)) {
             $this->Flash->error(__('Please, create a category first!'));
         }
